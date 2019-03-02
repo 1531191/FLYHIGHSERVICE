@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700');
+.main .articulos{
+    width: 68.5%;
+    margin-right: 1.5%;
+    float: left;
+}
+
+.main .articulos article{
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    
+}
+
+aside{
+    width: 30%;
+    background: #6eccde;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: arial;
+    text-align: justify;
+}
+
+footer{
+    background: black;
+    color: white;
+    clear: both;
+    text-align: center;
+    padding: 5px 1px;
+}
+
+
+.sub-menu a{
+    display: block;
+    padding: 10px 5px;
+    width: 130px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+header{
+    width: auto;
+    height: 42px;
+    background: #12005e;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+header ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+    /*letter-spacing: 1.5px;*/
+    font-size: 18px;
+}
+header ul ul{
+   position: absolute;
+    top: auto;
+    display: block;
+    background: #113137;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: all .6s;
+    visibility: hidden;
+
+}
+header ul li a span{
+    transition: all .6s;
+}
+header ul li a:hover span{
+    transform: translateY(10px);
+    opacity: 0;
+    
+}
+header ul li:hover ul{
+    opacity: 1;
+    transform: translateX(0%);   
+    visibility: visible;
+    
+    
+}
+
+header ul li:hover{
+    background: #3f9bfa;
+    text-shadow: 0 0 2px #000;
+     z-index: 1000;
+     
+}
+nav .logo-web{
+position:absolute;
+display:block;
+left:0px;
+top:0px;
+
+}
+
+nav .logo-web .image{
+position:relative;
+width:10px;
+height:10px;
+}
+
+footer pre a{
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+    /*letter-spacing: 1.5px;*/
+    font-size: 14px;
+}
+footer pre p{
+font-family: 'Alegreya Sans', sans-serif;
+font-size: 12px;
+color: #fff;
+}

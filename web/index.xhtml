@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+<html xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:head>
+        <title>Sistema de Usuarios</title>
+        <link rel="stylesheet" href="estilos.css"></link>
+        <link href="css/estilosLogin.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>                     
+        <h:form>
+            <p:growl id="msj" autoUpdate="true" />
+            
+            <p:outputLabel for="txtUsuario" value="Usuario" />
+            <p:inputText id="txtUsuario" value="#{usuarioBean.usuario.usuario}" />
+            
+            <p:outputLabel  value="Correo" />
+            <p:inputText value="#{usuarioBean.usuario.correo}"/>
+            
+            <p:outputLabel value="Telefono" />
+            <p:inputText value="#{usuarioBean.usuario.telefono}" />
+            
+            <p:outputLabel value="Password" />
+            <p:inputText value="#{usuarioBean.usuario.password}" />
+            
+            <p:commandButton value="Ingresar Usuario" actionListener="#{usuarioBean.registrar()}" update="msj" />
+            
+            <p:commandButton value="Listar Usuario" actionListener="#{usuarioBean.listar()}" update="data" />
+                             
+            <p:dataTable id="data" value="#{usuarioBean.lstUsuarios}" var="usuario" >      
+                <p:column headerText="Codigo" >
+                    <p:outputLabel value="#{usuario.codigo}" />
+                </p:column>
+                
+                <p:column headerText="Usuario" >
+                    <p:outputLabel value="#{usuario.usuario}" />
+                </p:column>
+                
+                <p:column headerText="Correo" >
+                    <p:outputLabel value="#{usuario.correo}" />
+                </p:column>
+                
+                <p:column headerText="Telefono" >
+                    <p:outputLabel value="#{usuario.telefono}" />
+                </p:column>
+                
+       
+                           
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>

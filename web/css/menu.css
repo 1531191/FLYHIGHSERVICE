@@ -1,0 +1,47 @@
+body{
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1{
+    color: #000000;
+    margin-top: 100px;
+}
+
+input{
+    width: 300px;
+    height: 35px;
+}
+
+textArea{
+    width: 600px;
+    height: 70px;
+    margin-top: 5px;
+}
+
+input, textArea{
+    background: transparent;
+    border: solid 2px #000000;
+    color: #000000;
+}
+
+input[type=submit]{
+    color: #000000;
+}
+::-webkit-input-placeholder
+{
+    color: #000000;
+}
+
+img{
+    width: 60px;
+    height: 60px;
+}
+
+td{
+    size: 12px;
+}
+
+a{
+   text-decoration: none;
+}

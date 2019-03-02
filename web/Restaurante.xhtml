@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:head>
+        <title>Sistema de Restaurantes</title>
+        <link rel="stylesheet" href="estilos.css"></link>
+        <link href="css/estilosLogin.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="msj" autoUpdate="true" />
+            
+            <p:outputLabel for="txtLugar" value="Lugar" />
+            <p:inputText id="txtLugar" value="#{restauranteBean.restaurante.lugar}"/>
+            
+            <p:outputLabel value="Restaurante" />
+            <p:inputText value="#{restauranteBean.restaurante.restaurante}" />
+            
+            <p:outputLabel value="Fecha_inicio" />
+            <p:inputText value="#{restauranteBean.restaurante.fechainicio}" />
+
+            <p:outputLabel value="Fecha_final" />
+            <p:inputText value="#{restauranteBean.restaurante.fechafinal}" />
+            
+            <p:outputLabel value="Numeroreserva" />
+            <p:inputText value="#{restauranteBean.restaurante.numeroreserva}" />
+            
+            <p:commandButton value="Ingresar Restaurante" actionListener="#{restauranteBean.registrar()}" update="msj" />
+            
+            <p:commandButton value="Listar Restaurante" actionListener="#{restauranteBean.listar()}" update="data" />
+            
+            <p:dataTable id="data" value="#{restauranteBean.lstRestaurante}" var="restaurantes" >      
+                <p:column headerText="Código" >
+                    <p:outputLabel value="#{restaurantes.codigo}" />
+                </p:column>
+                
+                <p:column headerText="Lugar" >
+                    <p:outputLabel value="#{restaurantes.lugar}" />
+                </p:column>
+                
+                <p:column headerText="Restaurante" >
+                    <p:outputLabel value="#{restaurantes.restaurante}" />
+                </p:column>
+                
+                <p:column headerText="Fecha_inicio" >
+                    <p:outputLabel value="#{restaurantes.fechainicio}" />
+                </p:column>
+                
+                <p:column headerText="Fecha_final" >
+                    <p:outputLabel value="#{restaurantes.fechafinal}" />
+                </p:column>
+                
+                <p:column headerText="Numeroreserva" >
+                    <p:outputLabel value="#{restaurantes.numeroreserva}" />
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>

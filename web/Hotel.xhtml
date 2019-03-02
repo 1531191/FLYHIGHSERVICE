@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:head>
+        <title>Sistema de Hoteles</title>
+        <link rel="stylesheet" href="estilos.css"></link>
+        <link href="css/estilosLogin.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="msj" autoUpdate="true" />
+            
+            <p:outputLabel for="txtHotel" value="Hotel" />
+            <p:inputText id="txtHotel" value="#{hotelBean.hotel.hotel}"/>
+            
+            <p:outputLabel value="Fecha_entrada" />
+            <p:inputText value="#{hotelBean.hotel.fechaentrada}" />
+            
+            <p:outputLabel value="Fecha_salidaa" />
+            <p:inputText value="#{hotelBean.hotel.fechasalida}" />
+            
+            <p:outputLabel value="Habitacion" />
+            <p:inputText value="#{hotelBean.hotel.habitacion}" />
+            
+            <p:commandButton value="Ingresar Hotel" actionListener="#{hotelBean.registrar()}" update="msj" />
+            
+            <p:commandButton value="Listar Hotel" actionListener="#{hotelBean.listar()}" update="data" />
+            
+            <p:dataTable id="data" value="#{hotelBean.lstHotel}" var="hotel" >      
+                <p:column headerText="Código" >
+                    <p:outputLabel value="#{hotel.codigo}" />
+                </p:column>
+                
+                <p:column headerText="Hotel" >
+                    <p:outputLabel value="#{hotel.hotel}" />
+                </p:column>
+                
+                <p:column headerText="Fecha_entrada" >
+                    <p:outputLabel value="#{hotel.fechaentrada}" />
+                </p:column>
+                
+                <p:column headerText="Fecha_salida" >
+                    <p:outputLabel value="#{hotel.fechasalida}" />
+                </p:column>
+                
+                <p:column headerText="Habitacion" >
+                    <p:outputLabel value="#{hotel.habitacion}" />
+                </p:column>
+                </p:dataTable>
+            </h:form>
+    </h:body>
+</html>

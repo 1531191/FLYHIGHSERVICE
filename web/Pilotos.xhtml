@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:head>
+        <title>sistema vuelos</title>
+        <link rel="stylesheet" href="estilos.css"></link>
+        <link href="css/estilosLogin.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="msj" autoUpdate="true" />
+            
+            <p:outputLabel for="txtNombre" value="Nombre"/>
+            <p:inputText id="txtNombre" value="#{pilotoBean.piloto.nombre}"  required="true" />
+            
+            <p:outputLabel  value="Categoria" />
+            <p:inputText value="#{pilotoBean.piloto.categoria}"/>
+            
+            <p:outputLabel value="NumeroAvion" />
+            <p:inputText value="#{pilotoBean.piloto.numeroavion}" />
+            
+            <p:outputLabel value="Capacidad" />
+            <p:inputText value="#{pilotoBean.piloto.capacidad}" />
+            
+            <p:outputLabel value="Pago" />
+            <p:inputText value="#{pilotoBean.piloto.pago}" />
+            
+            <p:commandButton value="Ingresar Pilotos" actionListener="#{pilotoBean.registrar()}" update="msj" />
+            
+            <p:commandButton value="Listar Pilotos" actionListener="#{pilotoBean.listar()}" update="data" />
+                      
+            <p:dataTable id="data" value="#{pilotoBean.lstPiloto}" var="pilotos" >      
+                <p:column headerText="Codigo" >
+                    <p:outputLabel value="#{pilotos.codigo}" />
+                </p:column>
+                
+                <p:column headerText="Nombre" >
+                    <p:outputLabel value="#{pilotos.nombre}" />
+                </p:column>
+                
+                <p:column headerText="Categoria" >
+                    <p:outputLabel value="#{pilotos.categoria}" />
+                </p:column>
+                
+                <p:column headerText="NumeroAvion" >
+                    <p:outputLabel value="#{pilotos.numeroavion}" />
+                </p:column>
+                <p:column headerText="Capacidad" >
+                    <p:outputLabel value="#{pilotos.capacidad}" />
+                </p:column>
+                <p:column headerText="Pago" >
+                    <p:outputLabel value="#{pilotos.pago}" />
+                </p:column>
+            </p:dataTable>
+            </h:form>
+    </h:body>
+</html>
+

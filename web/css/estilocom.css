@@ -1,0 +1,46 @@
+
+body{
+    background: #66afe9;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+}
+
+#conten{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#conten-img{
+    width: 400px;
+    margin: 24px;
+    text-align: center;
+    margin-top: 15px;
+    background: #66afe9;
+}
+
+#img{
+    width: 400px;
+    height: 180px;
+}
+
+#conten-img > label{
+    font-size: 25px;
+}
+
+table{
+    width: 100%;
+    height: 50px;
+    margin-top: 9px;
+    background: #e38d13;
+    border-style: none;
+}
+
+h1{
+    font-size: 45px;
+    text-align: center;
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Merienda', cursive;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenedor-form{
+    position: relative;
+    background: rgba(0,0,0,.7);
+    font-family: serif;
+    width: 100%;
+    max-width: 900px;
+    margin: 35px auto;
+    color: #fff;
+    border-radius: 19px;
+    box-shadow: 0px 0px 60px #006600, 0px 0px 90px #ffff66;
+    padding: 0.03px;
+    
+}
+.contenedor-form .toggle span{
+    position: absolute;
+   /* top: 7px;*/
+    right: 15px;
+    width: 120px;
+    height: 52px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    border-top: 3px solid #00ff00;
+    border-bottom: 3px solid #00ff00;
+    transition: all .5s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+    top: 69px;
+    color: #ffffff;
+}
+.contenedor-form .toggle .a{
+    left: 280px;
+}
+.contenedor-form .toggle .b{
+    left: 380px;
+}
+.contenedor-form .toggle .c{
+    left: 480px;
+}
+
+ 
+
+.contenedor-form .toggle span:hover{
+    border-top: 3px solid #006666;
+    border-bottom: 3px solid #006666;
+    
+}
+.contenedor-form h2{
+    margin: 0 0 28px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario input[type="dir"]{
+    outline: none;
+    background: rgba(0,0,0,.5);
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    border-bottom: 4px solid #00ff00;
+    font-size: 14px;
+    font-weight: normal;
+    transition: all.5s ease;
+    text-align: center;
+    top: 12px;
+}
+.formulario input[type="text"]:focus,
+.formulario input[type="date"]:focus,
+.formulario input[type="dir"]:focus{
+    border-bottom: 7px solid #0075d9;
+}
+
+.contenedor-form input[type=submit]{
+    background: #76ea17;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 10px 14px;
+    font-weight: normal;
+    font-family: 'Merienda', cursive;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all.5s ease;
+    border-radius: 13px;
+    top: 1000px;
+}
+.contenedor-form input[type=submit]:hover{
+    background: rgba(0,117,217,0.7);
+}
+.activ{
+    background:#990066;
+    
+}
+body{
+    background-image: url(../imagenes/orig.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#tabla {
+    margin-top: 200px ;
+   width: 900px; 
+   text-align: center;
+   background: rgba(0,10,204,0.2);
+   position: relative;
+   border-radius: 15px;
+}

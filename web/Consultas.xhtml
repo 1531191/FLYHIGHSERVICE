@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:head>
+        <title>sistema vuelos</title>
+        <link rel="stylesheet" href="estilos.css"></link>
+        <link href="css/estilosLogin.css" rel="stylesheet" type="text/css"/>
+            
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="msj" autoUpdate="true" />
+            
+            <p:outputLabel for="txtOrigen" value="Origen"/>
+            <p:inputText id="txtOrigen" value="#{vuelosBean.vuelos.origen}"/>
+            
+            <p:outputLabel  value="Destino" />
+            <p:inputText value="#{vuelosBean.vuelos.destino}"/>
+            
+            <p:outputLabel value="Salida" />
+            <p:inputText value="#{vuelosBean.vuelos.salida}" />
+            
+            <p:outputLabel value="Retorno" />
+            <p:inputText value="#{vuelosBean.vuelos.retorno}" />
+            
+            <p:outputLabel value="Pasajero" />
+            <p:inputText value="#{vuelosBean.vuelos.pasajero}" />
+            
+            <p:commandButton value="Ingresar Vuelos" actionListener="#{vuelosBean.registrar()}" update="msj" />
+            
+            <p:commandButton value="Listar Vuelos" actionListener="#{vuelosBean.listar()}" update="data" />
+                             
+            <p:dataTable id="data" value="#{vuelosBean.lstVuelos}" var="vuelos" >      
+                <p:column headerText="Idvuelos" >
+                    <p:outputLabel value="#{vuelos.codigo}" />
+                </p:column>
+                
+                <p:column headerText="Origen" >
+                    <p:outputLabel value="#{vuelos.origen}" />
+                </p:column>
+                
+                <p:column headerText="Destino" >
+                    <p:outputLabel value="#{vuelos.destino}" />
+                </p:column>
+                
+                <p:column headerText="salida" >
+                    <p:outputLabel value="#{vuelos.salida}" />
+                </p:column>
+                <p:column headerText="retorno" >
+                    <p:outputLabel value="#{vuelos.retorno}" />
+                </p:column>
+                <p:column headerText="Pasajeros" >
+                    <p:outputLabel value="#{vuelos.pasajero}" />
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
